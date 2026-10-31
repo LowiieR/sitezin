@@ -24,7 +24,22 @@
     border-radius: 20px;
 }
 
+.navegacao::before {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: var(--indicador-left, 6px);
+    width: var(--indicador-width, 0);
+    border-radius: 20px;
+    background-color: var(--verde);
+    content: "";
+    opacity: 0;
+    transition: left 0.3s ease, width 0.3s ease, opacity 0.2s ease;
+}
+
 .navegacao a {
+    position: relative;
+    z-index: 1;
     color: var(--texto);
     text-decoration: none;
     font-size: 20px;
@@ -34,13 +49,13 @@
     transition: 0.3s;
 }
 
-.navegacao a:hover {
-    color: var(--verde);
+.navegacao a:hover,
+.navegacao a:focus-visible {
+    color: var(--preto);
 }
 
-.navegacao a.ativo {
-    background-color: var(--verde);
-    color: var(--preto);
+.navegacao.indicador-visivel::before {
+    opacity: 1;
 }
 
 .logo {
