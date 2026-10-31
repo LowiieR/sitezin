@@ -283,3 +283,135 @@ body {
     }
 
 }
+
+/* ==============================
+   NOVA SEÇÃO
+============================== */
+
+.secao-conteudo {
+    padding: 100px 17px 80px;
+}
+
+.secao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.numero {
+    color: var(--verde);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.secao-titulo h2 {
+    color: var(--verde);
+    font-size: 38px;
+    font-style: italic;
+}
+
+.descricao-secao {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 45px;
+}
+
+
+/* CATEGORIAS */
+
+.conteudo-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.categoria {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 220px;
+    padding: 25px;
+
+    background-color: #252927;
+    border: 1px solid #343b37;
+    border-radius: 10px;
+
+    color: var(--texto);
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.categoria > span:first-child {
+    color: var(--verde);
+    font-size: 14px;
+}
+
+.categoria h3 {
+    color: var(--verde);
+    font-size: 27px;
+    margin-top: 25px;
+}
+
+.categoria p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.categoria .seta {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    font-size: 22px;
+    color: var(--verde);
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde);
+    background-color: #29312c;
+}
+
+
+/* ==============================
+   ANIMAÇÃO DE SCROLL
+============================== */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.revelar.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .conteudo-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-titulo h2 {
+        font-size: 30px;
+    }
+
+    .secao-conteudo {
+        padding: 70px 10px;
+    }
+
+}
