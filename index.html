@@ -92,30 +92,38 @@
 
         <div class="conteudo-categorias">
 
-            <a href="escritas.html" class="categoria">
+            <button type="button" class="categoria" data-modal="modais/principal.html">
                 <span>01</span>
                 <h3>Principal</h3>
                 <p>As informações mais básicas sobre mim.</p>
                 <span class="seta">↗</span>
-            </a>
+            </button>
 
-            <a href="artes.html" class="categoria">
+            <button type="button" class="categoria" data-modal="modais/interesses.html">
                 <span>02</span>
                 <h3>Interesses</h3>
                 <p>Coisas que me fazem aguentar essa vida. </p>
                 <span class="seta">↗</span>
-            </a>
+            </button>
 
-            <a href="galeria.html" class="categoria">
+            <button type="button" class="categoria" data-modal="modais/hobbies.html">
                 <span>03</span>
                 <h3>Hobbies</h3>
                 <p>Atividades que eu faço!</p>
                 <span class="seta">↗</span>
-            </a>
+            </button>
 
         </div>
 
     </section>
+
+    <dialog class="janela-categoria" id="janela-categoria" aria-labelledby="titulo-janela">
+        <div class="janela-cabecalho">
+            <h2 id="titulo-janela">Categoria</h2>
+            <button type="button" class="fechar-janela" aria-label="Fechar janela">×</button>
+        </div>
+        <iframe class="janela-corpo" id="corpo-janela" title="Conteúdo da categoria" src="about:blank"></iframe>
+    </dialog>
 
     <script src="script.js"></script>
 
