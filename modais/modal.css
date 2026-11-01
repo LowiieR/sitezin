@@ -139,6 +139,85 @@ blockquote {
     line-height: 1.6;
 }
 
+.interesses h1 {
+    margin-bottom: 12px;
+    color: #f7f8f6;
+    font-size: clamp(20px, 3.5vw, 27px);
+}
+
+.interesses-intro {
+    margin: 0 0 24px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.lista-interesses {
+    display: grid;
+    gap: 12px;
+}
+
+.topico-interesse {
+    overflow: hidden;
+    border-radius: 4px;
+    background: #4a5a51;
+}
+
+.topico-interesse summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    padding: 6px 18px;
+    color: #29b957;
+    font-size: clamp(23px, 4vw, 34px);
+    font-style: italic;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.topico-interesse summary::-webkit-details-marker {
+    display: none;
+}
+
+.topico-interesse summary::after {
+    content: "↗";
+    font-size: 34px;
+    font-style: normal;
+    line-height: 1;
+    transform: rotate(135deg);
+    transition: transform 180ms ease;
+}
+
+.topico-interesse[open] summary::after {
+    transform: rotate(315deg);
+}
+
+.topico-interesse summary:focus-visible {
+    outline: 2px solid #8ce2a5;
+    outline-offset: -4px;
+}
+
+.topico-conteudo {
+    max-height: 180px;
+    overflow-y: auto;
+    padding: 12px 18px 16px;
+    background: #1e2421;
+    color: #f7f8f6;
+    overscroll-behavior: contain;
+    scrollbar-color: #29b957 #303833;
+}
+
+.topico-conteudo p {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.topico-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 640px) {
     body {
         padding: 28px 22px;
@@ -178,4 +257,3 @@ blockquote {
         margin-top: 18px;
     }
 }
-
